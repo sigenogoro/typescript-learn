@@ -1,5 +1,4 @@
-# typescript-learn
-
+# typeScriptの学習サイト
 
 ## 環境構築方法(このリポジトリを git cloneした場合)
 ※ node, npm はインストール済み
