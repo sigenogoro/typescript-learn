@@ -25,3 +25,67 @@ if(typeof unknowValue2 === "string") {
 function throwError(message: string): never {
     throw new Error(message)
 }
+
+// void型
+function logMessaege(message: string): void {
+    console.log(message);
+}
+logMessaege("Log meesage!");
+
+// 配列型
+let scores: number[] = [90, 80, 20];
+let names: Array<string> = ["Alice", "Bob", "Charelie"];
+console.log(scores);
+console.log(names);
+// タプル型
+let tuple: [number, string] = [1, "Alice"];
+console.log(tuple);
+// tuple[0] = "Bob"; // エラー内容: Type 'string' is not assignable to type 'number'.
+
+// オブジェクト型
+let sampleUser: {name: string, age: number} = {
+    name: "Alice",
+    age: 17
+};
+
+enum Color {
+    Red,
+    Green,
+    Blue
+}
+
+let color: Color = Color.Blue;
+console.log(color); // enum の値は数値で出力される
+
+// null と undefined
+// null を代入できる
+let nullableValue: null = null;
+// 何も入っていない場合、undefined が代入される
+let undefinedValue;
+console.log(undefinedValue);
+
+// ユニオン型
+let value: string | number;
+value = "Hello, String!";
+value = 123; // number型も入れることができる
+// value = true　boolean型は入れることができない
+
+// 型ガード
+// 型ガードを利用することで型の絞り込みができる
+function processValue(value: string | number) {
+    if (typeof value === "string") {
+        console.log("String value: " + value);
+    } else if (typeof value === "number") {
+        console.log("Number value: " + value);
+    }
+}
+processValue("hogehoge");
+processValue(123);
+
+// リテラル型
+// リテラル型は特定の値を持つ型
+
+let direction: "left" | "right" | "up" | "down";
+direction = "left";
+// direction = "back"; // 特定の値以外はエラーとなる
+
