@@ -4,3 +4,6 @@ export function getGreeting(name: string): string {
     return name ? name : "Guest";
 }
 
+// // アロー関数のエクスポート
+// export const arrowFunctionGreeting = (name: string): string => name;
+
