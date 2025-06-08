@@ -14,6 +14,12 @@ console.log("アロー関数: " + sample("taro"));
 const totalSum = (x: number, y: number) => x + y;
 console.log("合計: " + totalSum(10, 20));
 
+// アロー関数: 戻り値指定
+const shout = (): void => {
+    console.log("shout!!!!");
+}
+shout();
+
 // 関数の引数にデフォルト値を設定
 function greetDefault(name: string = "Guest"): string {
     return `Hello, ${name}!`;
