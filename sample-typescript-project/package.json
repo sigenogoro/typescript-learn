@@ -1,16 +1,25 @@
 {
   "name": "sample-typescript-project",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "TypeScript learning project with basic syntax examples",
+  "main": "build/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "tsc --watch",
+    "clean": "rm -rf build",
+    "run:array": "tsc && node build/array.js",
+    "run:function": "tsc && node build/function.js",
+    "run:interface": "tsc && node build/interface.js",
+    "run:type": "tsc && node build/type/sample.js",
+    "run:practice": "tsc && node build/practice/sample.js"
   },
-  "keywords": [],
+  "keywords": ["typescript", "learning", "tutorial", "examples"],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "type": "module",
   "devDependencies": {
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "@types/node": "^22.0.0"
   }
 }

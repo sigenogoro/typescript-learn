@@ -1,0 +1,21 @@
+{
+  "name": "typescript-text-rpg-oop",
+  "version": "1.0.0",
+  "description": "CLI text-based RPG built with TypeScript and OOP principles",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "clean": "rm -rf build"
+  },
+  "keywords": ["typescript", "rpg", "cli", "game", "oop"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/node": "^22.0.0"
+  }
+}

@@ -39,3 +39,9 @@ yarn-error.log*
 .cache
 .temp
 
+# Claude Code
+CLAUDE.md
+.claude/
+claude-*
+*.claude
+claude_*.log
