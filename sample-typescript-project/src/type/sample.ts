@@ -27,12 +27,12 @@ type Status = "active" | "success" | "error";
 type ID = string | number;
 
 // 関数型
-type Calculator = (a: number, b: number) => number;
-const addFunction: Calculator = (a, b) => a + b;
+type CalculatorSample = (a: number, b: number) => number;
+const addFunction: CalculatorSample = (a, b) => a + b;
 console.log(addFunction(1, 2));
 
 // 関数の引数として利用
-function calculate(operation:Calculator, x: number, y: number): number {
+function calculate(operation:CalculatorSample, x: number, y: number): number {
     return operation(x, y);
 }
 console.log(calculate(addFunction, 3, 4));
