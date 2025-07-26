@@ -9,17 +9,27 @@
     "watch": "tsc --watch",
     "dev": "tsc --watch",
     "clean": "rm -rf build",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "run:array": "tsc && node build/array.js",
     "run:function": "tsc && node build/function.js",
     "run:interface": "tsc && node build/interface.js",
     "run:type": "tsc && node build/type/sample.js",
     "run:practice": "tsc && node build/practice/sample.js"
   },
-  "keywords": ["typescript", "learning", "tutorial", "examples"],
+  "keywords": [
+    "typescript",
+    "learning",
+    "tutorial",
+    "examples"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.7.2",
-    "@types/node": "^22.0.0"
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.7.2"
   }
 }

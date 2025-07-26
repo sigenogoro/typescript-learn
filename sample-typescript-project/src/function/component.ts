@@ -1,5 +1,5 @@
 // コンポーネント集(他ファイルで再利用できる関数集)
-
+// export function 他のファイルで利用できるようにするための関数
 export function getGreeting(name: string): string {
     return name ? name : "Guest";
 }
