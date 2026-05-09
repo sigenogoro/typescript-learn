@@ -1,42 +1,40 @@
-// ── 基本型 ──────────────────────────────────────────────────────
-const playerName: string = "勇者";
+// --変数-- 
+const name: string = "勇者";
 const hp: number = 100;
-const isAlive: boolean = true;
+console.log(name, hp);
 
-// 配列（2通りの書き方、どちらでも同じ意味）
-const items: string[] = ["ポーション", "エリクサー"];
-const scores: Array<number> = [10, 20, 30];
+// 型推論という形で使うことができる
+const role = "主人公";
 
-// タプル — 要素数と各要素の型が固定
-const player: [string, number] = ["勇者", 100, "モンスター"];
+console.log(`${name}は${name}です！`);
 
-// enum — 名前付き定数の集合
-enum Direction {
-  North,
-  South,
-  East,
-  West,
+// array, tuple, enum
+const skill: readonly string[] = ["火炎放射", "ビンタ", "空手チョップ"]
+const position: [number, number] = [100, 50];
+
+console.log(`現在の場所は、X座標:${position[0]}, Y座標:${position[1]}`)
+
+// enum Element {Fire, Ice, Thunder, Dark}
+
+// const element = Element.Fire;
+// // elementは「数値」である
+// console.log(element);
+
+// こっちの方が文字列で返答してくれる
+enum Element {
+  Fire = "Fire",
+  Ice = "Ice",
+  Thunder = "Thunder",
+  Dark = "Dark"
+}
+console.log(Element.Fire);
+// type とは型の別名である
+// string | string の 「|」がユニオンという形である
+// typeに何を格納するのを許すのかを出すことができる
+type Job = "hero" | "wizard" | "warrior";
+
+// テスト用にエクスポートする
+export function add(a: number, b: number): number {
+  return a + b;
 }
 
-// any — 型チェックを無効化（なるべく使わない）
-let anything: any = 42;
-anything = "文字列にもなれる";
-
-// unknown — any より安全。使う前に型チェックが必要
-let unknownValue: unknown = "不明な値";
-if (typeof unknownValue === "string") {
-  console.log(unknownValue.toUpperCase());
-}
-
-// null / undefined
-let nullable: string | null = null;
-let optional: string | undefined = undefined;
-
-// ── 出力 ─────────────────────────────────────────────────────────
-console.log("=== 基本型 ===");
-console.log(`名前: ${playerName}, HP: ${hp}, 生存: ${isAlive}`);
-console.log(`アイテム: ${items.join(", ")}`);
-console.log(`スコア: ${scores.join(", ")}`);
-console.log(`プレイヤー: ${player[0]}, HP: ${player[1]}`);
-console.log(`方向（enum）: ${Direction[Direction.North]}`);
-console.log(`nullable: ${nullable}, optional: ${optional}`);
