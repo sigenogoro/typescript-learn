@@ -1,1 +1,0 @@
-console.log("Starting the TypeScript Text RPG...");
