@@ -8,6 +8,27 @@ NestJS 互換の TypeScript 環境で、基礎から CLI RPG 作成まで段階�
 npm install
 ```
 
+### Dev ContainerとClaude Codeを使う場合
+
+事前にDocker DesktopとVS CodeのDev Containers拡張機能を用意する。
+VS Codeでこのリポジトリを開き、コマンドパレットから
+`Dev Containers: Rebuild and Reopen in Container` を実行する。
+
+Node.js 22とClaude Codeを含むコンテナが作成され、`npm ci` によって
+プロジェクトの依存関係が自動でインストールされる。
+
+
+コンテナを開いた後、VS CodeのターミナルでClaude Codeを起動したい場合は下記を実行すること。
+
+```bash
+claude
+```
+
+初回起動時は表示される案内に従ってブラウザでログインする。コンテナ環境で
+コールバックが完了しない場合は、ブラウザに表示されたコードをターミナルへ貼り付ける。
+
+APIキーやその他の認証情報は、リポジトリ内のファイルへ保存しないこと。
+
 ## コマンド
 
 | コマンド | 説明 |
